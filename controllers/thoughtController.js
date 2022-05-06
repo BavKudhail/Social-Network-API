@@ -82,4 +82,21 @@ module.exports = {
       })
       .catch((err) => res.json(err));
   },
+  //   add reaction
+  addReaction({ params, body }, res) {
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $addToSet: { reactions: body } },
+      { new: true, runValidators: true }
+    )
+      .then((thoughtData) => {
+        if (!thoughtData) {
+          return res
+            .status(404)
+            .json({ message: "No thought found with this id!" });
+        }
+        res.json(thoughtData);
+      })
+      .catch((err) => res.json(err));
+  },
 };
