@@ -67,20 +67,9 @@ module.exports = {
         if (!deletedThought) {
           return res.status(404).json({ message: "No thought with this id!" });
         }
-        return User.findOneAndUpdate(
-          { _id: params.userId },
-          { $pull: { thoughts: params.thoughtId } },
-          { new: true }
-        );
+        res.json(deletedThought);
       })
-      .then((userData) => {
-        if (!userData) {
-          res.status(404).json({ message: "No user found with this id" });
-          return;
-        }
-        res.json(userData);
-      })
-      .catch((err) => res.json(err));
+      .catch((err) => res.status(400).json(err));
   },
   //   add reaction
   addReaction({ params, body }, res) {

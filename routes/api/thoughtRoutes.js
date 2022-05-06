@@ -18,10 +18,11 @@ router.route("/").get(getAllThoughts);
 router.route("/:userId").post(addThought);
 
 // /api/thoughts/thoughtId
-router.route("/:thoughtId").get(getThoughtByID).put(updateThought);
-
-// /api/thoughts/userId/thoughtId
-router.route("/:userId/:thoughtId").delete(removeThought);
+router
+  .route("/:thoughtId")
+  .get(getThoughtByID)
+  .put(updateThought)
+  .delete(removeThought);
 
 // /api/thoughts/thoughtId/reactions
 router.route("/:thoughtId/reactions").post(addReaction);
