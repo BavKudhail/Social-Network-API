@@ -4,7 +4,7 @@
 REST API for a social network web app where users can share their thoughts, react to friends’ thoughts, and create a friend list. 
 Built with Express, Mongoose, and MongoDB.
 
-![image](https://user-images.githubusercontent.com/93915846/167193926-56f37a91-f93c-4694-8076-e227261896ee.png)
+[![image](https://user-images.githubusercontent.com/93915846/167193926-56f37a91-f93c-4694-8076-e227261896ee.png)](https://www.youtube.com/watch?v=uhmafnREYLY)
 
 
 ## User Story
