@@ -25,4 +25,24 @@ module.exports = {
         res.status(400).json(err);
       });
   },
+  //   add thought to the user
+  addThought({ params, body }, res) {
+    console.log(body);
+    Thought.create(body)
+      .then(({ _id }) => {
+        return User.findOneAndUpdate(
+          { _id: params.userId },
+          { $push: { thoughts: _id } },
+          { new: true }
+        );
+      })
+      .then((userData) => {
+        if (!userData) {
+          res.status(404).json({ message: "No user found with this id!" });
+          return;
+        }
+        res.json(userData);
+      })
+      .catch((err) => res.json(err));
+  },
 };
