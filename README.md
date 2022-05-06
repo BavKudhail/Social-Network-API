@@ -47,6 +47,8 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
   * Mongoose
 
 ## Walkthrough
+https://user-images.githubusercontent.com/93915846/167195507-9cf56465-9637-48e3-93ca-9dfacc44ff6a.mp4
+
 
 
 ## Installation
