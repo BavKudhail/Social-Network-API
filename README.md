@@ -1,4 +1,4 @@
-# 18 NoSQL: Social Network API
+# NoSQL: Social Network API
 
 ### Description
 REST API for a social network web app where users can share their thoughts, react to friends’ thoughts, and create a friend list. 
